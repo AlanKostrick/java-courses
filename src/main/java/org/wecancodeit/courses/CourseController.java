@@ -21,7 +21,7 @@ public class CourseController {
 
 	@RequestMapping("/course")
 	public String findOneCourse(@RequestParam(value = "id") Long id, Model model) {
-		// model.addAttribute("courses", courseRepo.findOne(id));
+		model.addAttribute("courses", courseRepo.findOne(id));
 		return "course";
 	}
 
